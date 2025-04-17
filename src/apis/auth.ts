@@ -2,9 +2,9 @@ import type User from '@/types/User';
 import axiosApi from '@/utils/axiosConfig';
 import axios from 'axios';
 
-const apiRoot = process.env.VITE_PROGRAMMERS_API_ROOT;
-const kakaoApi = process.env.VITE_KAKAO_REST_BASE_API_URL
-const kakaoApiKey = process.env.VITE_KAKAO_REST_API_KEY;
+const apiRoot = import.meta.VITE_PROGRAMMERS_API_ROOT;
+const kakaoApi =import.meta.VITE_KAKAO_REST_BASE_API_URL
+const kakaoApiKey = import.meta.VITE_KAKAO_REST_API_KEY;
 
 
 export async function userLogin(email: string, password: string): Promise<User> {
