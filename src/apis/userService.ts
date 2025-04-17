@@ -4,9 +4,9 @@ import type UserRegisterForm from '@/types/UserRegisterForm';
 import axiosApi from '@/utils/axiosConfig';
 import axios from 'axios';
 
-const apiRoot = import.meta.env.VITE_PROGRAMMERS_API_ROOT;
-const kakaoApi = import.meta.env.VITE_KAKAO_REST_BASE_API_URL;
-const kakaoApiKey = import.meta.env.VITE_KAKAO_REST_API_KEY;
+const apiRoot = process.env.VITE_PROGRAMMERS_API_ROOT;
+const kakaoApi = process.env.VITE_KAKAO_REST_BASE_API_URL;
+const kakaoApiKey = process.env.VITE_KAKAO_REST_API_KEY;
 
 export async function userRegister(formData: UserRegisterForm): Promise<User> {
   const fullName = JSON.stringify({
@@ -48,7 +48,6 @@ export async function checkUserEmail(email: string): Promise<boolean> {
 export async function createScrapPost(
   userId: string,
   postData: any,
-  channel: string,
 ): Promise<string> {
   try {
     const scrapTitle = JSON.stringify({
@@ -240,10 +239,10 @@ export async function deleteScrapPost(scrapId: string) {
 // }
 
 // 임시로 주석 처리된 toggleScrap
-export async function toggleScrap(userId: string, festivalData: any, context: string = 'default') {
+export async function toggleScrap(userId: string,) {
   try {
     // 스크랩 목록을 실제로 가져오지 않고 빈 배열 반환 (임시 대체)
-    let updatedScrapList = [];
+    const updatedScrapList = [];
 
     console.log('임시 대체: 스크랩 처리 로직 생략');
 

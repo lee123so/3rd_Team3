@@ -68,7 +68,7 @@ export default class CultureAPI {
       }
 
       // ✅ 모든 필드를 유지하면서 변환
-      const items = response.data.response.body.items.item.map((item) => ({
+      const items = response.data.response.body.items.item.map((item:any) => ({
         content_id: item.contentid,
         content_type_id: item.contenttypeid,
         name: item.title,

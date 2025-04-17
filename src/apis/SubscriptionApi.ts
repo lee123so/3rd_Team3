@@ -25,7 +25,7 @@ export const getSubscriptionList = async() =>{
     return [];
   }
 }
-export const getAptData = async (id: string) => {
+export const getAptData = async (id?: string) => {
   try {
     const response = await axios.get(
       `${baseUrl}/ApplyhomeInfoDetailSvc/v1/getAPTLttotPblancDetail`,
@@ -48,7 +48,7 @@ export const getAptData = async (id: string) => {
   }
 };
 
-export const getHouseData = async (id: string) => {
+export const getHouseData = async (id?: string) => {
   try {
     const response = await axios.get(
       `${baseUrl}/ApplyhomeInfoDetailSvc/v1/getUrbtyOfctlLttotPblancDetail`,

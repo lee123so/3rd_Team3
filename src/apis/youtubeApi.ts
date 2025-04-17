@@ -1,7 +1,6 @@
 import type {YoutubeResponse} from '@/types/YoutubeResponse';
 import {youtubeApiInstance} from '@/utils/axiosInstance';
 
-const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY; // API 키 가져오기
 
 export const fetchYoutube = async (keyword: string): Promise<YoutubeResponse> => {
   try {

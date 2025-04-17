@@ -10,7 +10,7 @@ interface RecipeParams {
   RCP_PARTS_DTLS: string[];
 }
 
-const apiKey = import.meta.env.VITE_RECIPE_API_KEY; // API 키 가져오기
+const apiKey = process.env.VITE_RECIPE_API_KEY; // API 키 가져오기
 
 let cachedRecipes: Recipe[] | null = null;
 let lastParams: RecipeParams | null = null;
@@ -43,7 +43,7 @@ export const fetchRecipeList = async (params: RecipeParams): Promise<RecipeRespo
       lastParams = params;
       const allRecipes: Recipe[][] = [];
 
-      for (let ingredient of RCP_PARTS_DTLS) {
+      for (const ingredient of RCP_PARTS_DTLS) {
         const url = `/${apiKey}/COOKRCP01/json/${1}/${1000}/${RCP_NM ? `RCP_NM=${RCP_NM}&` : ''}${RCP_PAT2 ? `RCP_PAT2=${RCP_PAT2}&` : ''}RCP_PARTS_DTLS=${ingredient}`;
         try {
           const response = await recipeApiInstance.get<RecipeResponse>(url);

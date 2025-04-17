@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import BannerComponent from '@/components/BannerComponent.vue';
-  import BookmarkButton from '@/components/BookmarkButton.vue';
   import ShareButton from '@/components/ShareButton.vue';
   import type {AptInfo, HouseInfo} from '@/types/SubscriptionTypes';
   import {getAptData, getHouseData} from '@/apis/subscriptionApi';
