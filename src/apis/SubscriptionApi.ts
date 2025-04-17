@@ -3,7 +3,7 @@ import axios from "axios"
 
 
 const baseUrl = 'https://api.odcloud.kr/api';
-const key = import.meta.VITE_SUBSCRIPTION_API_KEY;
+const key = import.meta.env.VITE_SUBSCRIPTION_API_KEY;
 
 
 export const getSubscriptionList = async() =>{

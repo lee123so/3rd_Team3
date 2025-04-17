@@ -10,7 +10,7 @@ interface RecipeParams {
   RCP_PARTS_DTLS: string[];
 }
 
-const apiKey = import.meta.VITE_RECIPE_API_KEY; // API 키 가져오기
+const apiKey = import.meta.env.VITE_RECIPE_API_KEY; // API 키 가져오기
 
 let cachedRecipes: Recipe[] | null = null;
 let lastParams: RecipeParams | null = null;
