@@ -1,8 +1,8 @@
 import {defineStore} from 'pinia';
-import {ref, onMounted} from 'vue';
+import {ref,} from 'vue';
 import type User from '@/types/User';
 import {userLogin, getUserInfo, userLogout} from '@/apis/auth';
-import {userRegister, updateUser, createScrapPost} from '@/apis/userService';
+import {userRegister, updateUser, } from '@/apis/userService';
 import type UserRegisterForm from '@/types/UserRegisterForm';
 import type { UserFullName } from '@/types/User';
 
@@ -34,7 +34,7 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
-  const register = async (formData: UserRegisterForm) => {
+ const register = async (formData: UserRegisterForm) => {
     try {
       const newUser = await userRegister(formData);
       console.log('new user : ', newUser);

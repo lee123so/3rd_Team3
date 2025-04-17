@@ -2,7 +2,7 @@ import axios from "axios";
 
 // ✅ API 기본 설정
 const TOUR_API_URL = "http://apis.data.go.kr/B551011/KorService1/";
-const TOUR_API_KEY = import.meta.env.VITE_TOURAPI_KEY; // 환경 변수에서 API 키 불러오기
+const TOUR_API_KEY = process.env.VITE_TOURAPI_KEY; // 환경 변수에서 API 키 불러오기
 
 const defaultParams = {
   MobileOS: "ETC",
