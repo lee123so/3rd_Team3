@@ -4,7 +4,7 @@
   import FullCalendar from '@fullcalendar/vue3';
   import dayGridPlugin from '@fullcalendar/daygrid';
   import interactionPlugin from '@fullcalendar/interaction';
-  import {getAptData, getHouseData} from '@/apis/SubscriptionApi';
+  import {getAptData, getHouseData} from '@/apis/subscriptionApi';
   import {AptInfo, HouseInfo} from '@/types/SubscriptionTypes';
   import {useRoute, useRouter} from 'vue-router';
   import {reactive, ref, onMounted, watch} from 'vue';
